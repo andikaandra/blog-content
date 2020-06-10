@@ -1,6 +1,7 @@
 package main
 
 import (
+	"encoding/json"
 	"fmt"
 	"net/http"
 
@@ -11,7 +12,7 @@ import (
 type TokenClaims struct {
 	Email       string
 	AccessToken string
-	Exp         int64
+	Exp         float64
 }
 
 func tokenAuthMiddleware() gin.HandlerFunc {
@@ -75,6 +76,7 @@ func validateToken(tokenString string) (*jwt.Token, error) {
 	return token, nil
 }
 
+// getTokenData extract token metadata, return claims
 func getTokenData(c *gin.Context) (tokenClaims TokenClaims, err error) {
 	tokenString, err := getToken(c)
 	if err != nil {
@@ -92,12 +94,12 @@ func getTokenData(c *gin.Context) (tokenClaims TokenClaims, err error) {
 			return
 		}
 
-		accessToken, ok := claims["acces_token"].(string)
+		accessToken, ok := claims["access_token"].(string)
 		if !ok {
 			return
 		}
 
-		exp, ok := claims["exp"].(int64)
+		exp, ok := claims["exp"].(float64)
 		if !ok {
 			return
 		}
@@ -107,6 +109,43 @@ func getTokenData(c *gin.Context) (tokenClaims TokenClaims, err error) {
 			AccessToken: accessToken,
 			Exp:         exp,
 		}
+		return
+	}
+
+	return
+}
+
+// isResourceOwner check requester is allowed to access resource
+func isResourceOwner(tokenClaims TokenClaims, userID string) bool {
+	// we can do everything from token from redis
+	// better approach is saving other data in key "access_token:YOUR_ACCESS_TOKEN"
+	// like user id, expiry, refresh token, etc.
+	// or save data on token claims
+	savedToken, err := getTokenFromRedis(tokenClaims.AccessToken)
+	if err != nil {
+		return false
+	}
+	fmt.Println(savedToken)
+
+	// eg: match between user id in redis with requested user id
+	if savedToken.UserID != userID {
+		return false
+	}
+
+	return true
+}
+
+func getTokenFromRedis(accessToken string) (savedToken SavedToken, err error) {
+	client := getRedisClient()
+	tokenByte, err := client.Get(fmt.Sprintf("access_token:%s", accessToken)).Bytes()
+	if err != nil {
+		return
+	}
+
+	// its because we save value as SavedToken, so we must unmarshal to get the value
+
+	err = json.Unmarshal(tokenByte, &savedToken)
+	if err != nil {
 		return
 	}
 

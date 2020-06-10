@@ -10,22 +10,6 @@
   version = "v3.2.0"
 
 [[projects]]
-  digest = "1:80057945464ffb5b0da1f026beb8df0e8dbd098eaf771a349291bed2cd29a83e"
-  name = "github.com/fsnotify/fsnotify"
-  packages = ["."]
-  pruneopts = "UT"
-  revision = "45d7d09e39ef4ac08d493309fa031790c15bfe8a"
-  version = "v1.4.9"
-
-[[projects]]
-  digest = "1:ae8d4268210394a71e5785af821856a8f939e8429879a377c7fcf94b0f47aba1"
-  name = "github.com/gin-contrib/cors"
-  packages = ["."]
-  pruneopts = "UT"
-  revision = "3ce2e80966d59f18f21ca3544f57856072274179"
-  version = "v1.3.1"
-
-[[projects]]
   digest = "1:3ee1d175a75b911a659fbd860060874c4f503e793c5870d13e5a0ede529a63cf"
   name = "github.com/gin-contrib/sse"
   packages = ["."]
@@ -82,14 +66,6 @@
   version = "v6.15.8"
 
 [[projects]]
-  digest = "1:a3af33fd30536d9c5a7b6ad542390919e57c1125097a194c7b3d9904109a0611"
-  name = "github.com/go-sql-driver/mysql"
-  packages = ["."]
-  pruneopts = "UT"
-  revision = "17ef3dd9d98b69acec3e85878995ada9533a9370"
-  version = "v1.5.0"
-
-[[projects]]
   digest = "1:d1e35b720b5f5156502ffdd174000c81295919293735342da78582e4dc7a8bcd"
   name = "github.com/golang/protobuf"
   packages = ["proto"]
@@ -98,23 +74,12 @@
   version = "v1.3.3"
 
 [[projects]]
-  digest = "1:c0d19ab64b32ce9fe5cf4ddceba78d5bc9807f0016db6b1183599da3dcc24d10"
-  name = "github.com/hashicorp/hcl"
-  packages = [
-    ".",
-    "hcl/ast",
-    "hcl/parser",
-    "hcl/printer",
-    "hcl/scanner",
-    "hcl/strconv",
-    "hcl/token",
-    "json/parser",
-    "json/scanner",
-    "json/token",
-  ]
+  digest = "1:582b704bebaa06b48c29b0cec224a6058a09c86883aaddabde889cd1a5f73e1b"
+  name = "github.com/google/uuid"
+  packages = ["."]
   pruneopts = "UT"
-  revision = "8cb6e5b959231cc1119e43259c4a608f9c51a241"
-  version = "v1.0.0"
+  revision = "0cd6bf5da1e1c83f8b45653022c74f71af0538a4"
+  version = "v1.1.1"
 
 [[projects]]
   digest = "1:7cd2924a44ecf80a319cfa2378529fabd348d011b739fb4eccc565f65e3296c4"
@@ -133,28 +98,12 @@
   version = "v1.2.0"
 
 [[projects]]
-  digest = "1:5a0ef768465592efca0412f7e838cdc0826712f8447e70e6ccc52eb441e9ab13"
-  name = "github.com/magiconair/properties"
-  packages = ["."]
-  pruneopts = "UT"
-  revision = "de8848e004dd33dc07a2947b3d76f618a7fc7ef1"
-  version = "v1.8.1"
-
-[[projects]]
   digest = "1:0c58d31abe2a2ccb429c559b6292e7df89dcda675456fecc282fa90aa08273eb"
   name = "github.com/mattn/go-isatty"
   packages = ["."]
   pruneopts = "UT"
   revision = "7b513a986450394f7bbf1476909911b3aa3a55ce"
   version = "v0.0.12"
-
-[[projects]]
-  digest = "1:dd34285411cd7599f1fe588ef9451d5237095963ecc85c1212016c6769866306"
-  name = "github.com/mitchellh/mapstructure"
-  packages = ["."]
-  pruneopts = "UT"
-  revision = "20e21c67c4d0e1b4244f83449b7cdd10435ee998"
-  version = "v1.3.1"
 
 [[projects]]
   digest = "1:33422d238f147d247752996a26574ac48dcf472976eda7f5134015f06bf16563"
@@ -173,90 +122,12 @@
   version = "1.0.1"
 
 [[projects]]
-  digest = "1:53aab5f59edb1cd47773bbbb5b1b6d0b76b0c9e31cfac670a0bb7ccc917e98a3"
-  name = "github.com/pelletier/go-toml"
-  packages = ["."]
-  pruneopts = "UT"
-  revision = "16c9a8bdc086a2130a88eff98df4088e4c359bb2"
-  version = "v1.8.0"
-
-[[projects]]
-  digest = "1:2e76a73cb51f42d63a2a1a85b3dc5731fd4faf6821b434bd0ef2c099186031d6"
-  name = "github.com/rs/xid"
-  packages = ["."]
-  pruneopts = "UT"
-  revision = "15d26544def341f036c5f8dca987a4cbe575032c"
-  version = "v1.2.1"
-
-[[projects]]
-  digest = "1:bb495ec276ab82d3dd08504bbc0594a65de8c3b22c6f2aaa92d05b73fbf3a82e"
-  name = "github.com/spf13/afero"
-  packages = [
-    ".",
-    "mem",
-  ]
-  pruneopts = "UT"
-  revision = "588a75ec4f32903aa5e39a2619ba6a4631e28424"
-  version = "v1.2.2"
-
-[[projects]]
-  digest = "1:ff4cd55a3666b6ea3a876c9e133bfb54d6c812e725409a773f2c94a0b3a92f4f"
-  name = "github.com/spf13/cast"
-  packages = ["."]
-  pruneopts = "UT"
-  revision = "1ffadf551085444af981432dd0f6d1160c11ec64"
-  version = "v1.3.1"
-
-[[projects]]
-  digest = "1:1b753ec16506f5864d26a28b43703c58831255059644351bbcb019b843950900"
-  name = "github.com/spf13/jwalterweatherman"
-  packages = ["."]
-  pruneopts = "UT"
-  revision = "94f6ae3ed3bceceafa716478c5fbf8d29ca601a1"
-  version = "v1.1.0"
-
-[[projects]]
-  digest = "1:524b71991fc7d9246cc7dc2d9e0886ccb97648091c63e30eef619e6862c955dd"
-  name = "github.com/spf13/pflag"
-  packages = ["."]
-  pruneopts = "UT"
-  revision = "2e9d26c8c37aae03e3f9d4e90b7116f5accb7cab"
-  version = "v1.0.5"
-
-[[projects]]
-  digest = "1:973661255593cb4cca15cf62e3bd80cc34ee1490aae470aa61e668060838f94f"
-  name = "github.com/spf13/viper"
-  packages = ["."]
-  pruneopts = "UT"
-  revision = "13df72109047b6ae9c907bce81e327265d6d8a9c"
-  version = "v1.7.0"
-
-[[projects]]
-  digest = "1:f4b32291cad5efac2bfdba89ccde6aa04618b62ce06c1a571da2dc4f3f2677fb"
-  name = "github.com/subosito/gotenv"
-  packages = ["."]
-  pruneopts = "UT"
-  revision = "2ef7124db659d49edac6aa459693a15ae36c671a"
-  version = "v1.2.0"
-
-[[projects]]
   digest = "1:5a1cf4e370bc86137b58da2ae065e76526d32b11f62a7665f36dbd5f41fa95ff"
   name = "github.com/ugorji/go"
   packages = ["codec"]
   pruneopts = "UT"
   revision = "23ab95ef5dc3b70286760af84ce2327a2b64ed62"
   version = "v1.1.7"
-
-[[projects]]
-  branch = "master"
-  digest = "1:9d5b5d543996dd584da1db1e0de1926f3e4c3a8dba0fa2f8db70f3ebee2342e0"
-  name = "golang.org/x/crypto"
-  packages = [
-    "bcrypt",
-    "blowfish",
-  ]
-  pruneopts = "UT"
-  revision = "4b2356b1ed79e6be3deca3737a3db3d132d2847a"
 
 [[projects]]
   branch = "master"
@@ -267,43 +138,12 @@
   revision = "d101bd2416d505c0448a6ce8a282482678040a89"
 
 [[projects]]
-  digest = "1:1093f2eb4b344996604f7d8b29a16c5b22ab9e1b25652140d3fede39f640d5cd"
-  name = "golang.org/x/text"
-  packages = [
-    "internal/gen",
-    "internal/triegen",
-    "internal/ucd",
-    "transform",
-    "unicode/cldr",
-    "unicode/norm",
-  ]
-  pruneopts = "UT"
-  revision = "342b2e1fbaa52c93f31447ad2c6abc048c63e475"
-  version = "v0.3.2"
-
-[[projects]]
   digest = "1:0e49ce3bb641491517ba5035619be50aa07619814665c9761d0decb48f35ea94"
   name = "gopkg.in/go-playground/validator.v9"
   packages = ["."]
   pruneopts = "UT"
   revision = "21c910fc6d9c3556c28252b04beb17de0c2d40ec"
   version = "v9.31.0"
-
-[[projects]]
-  digest = "1:2d4e0b42440441453b41485a070c94fb690782b2b7b9f0d3519d62df4f8d612d"
-  name = "gopkg.in/guregu/null.v3"
-  packages = ["."]
-  pruneopts = "UT"
-  revision = "1e6a5b0d3fb642d7bf50a270adf19b54006c0269"
-  version = "v3.5.0"
-
-[[projects]]
-  digest = "1:2a8ce9278a57dba0bca00383d26744e88324c2696ad8538b3f7a69067d02d78c"
-  name = "gopkg.in/ini.v1"
-  packages = ["."]
-  pruneopts = "UT"
-  revision = "1fc6efb6f20ef065ae00baf7f4fa7722cad0ec34"
-  version = "v1.57.0"
 
 [[projects]]
   digest = "1:55b110c99c5fdc4f14930747326acce56b52cfce60b24b1c03ef686ac0e46bb1"
@@ -318,14 +158,9 @@
   analyzer-version = 1
   input-imports = [
     "github.com/dgrijalva/jwt-go",
-    "github.com/gin-contrib/cors",
     "github.com/gin-gonic/gin",
     "github.com/go-redis/redis",
-    "github.com/go-sql-driver/mysql",
-    "github.com/rs/xid",
-    "github.com/spf13/viper",
-    "golang.org/x/crypto/bcrypt",
-    "gopkg.in/guregu/null.v3",
+    "github.com/google/uuid",
   ]
   solver-name = "gps-cdcl"
   solver-version = 1
